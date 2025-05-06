@@ -1,34 +1,30 @@
 #include <Arduino.h>
+#include <Motor.h>
 
-#define ENA 13
-#define ENB 12
+// #define ENA 13
+// #define ENB 12
 
-//for Motor A
+// for Motor A
 
-#define IN1 19
-#define IN2 18
+// #define IN1 19
+// #define IN2 18
 
-//for Motor B
+// for Motor B
 
-#define IN3 5
-#define IN4 4
+// #define IN3 5
+// #define IN4 4
+Motor motorA = Motor(13, 19, 18);
+Motor motorB = Motor(12, 5, 4);
 
-void setup() {
-  
+
+void setup()
+{
+  motorA.setSpeed();
+  motorB.setSpeed();
 }
 
-void loop() {
-  
-}
-
-
-void Stop(int FIN, int SIN) {
-  digitalWrite(FIN, HIGH);
-  digitalWrite(SIN, HIGH);
-}
-
-void MoveForward(double EN, int FIN, int SIN) {
-  
-  digitalWrite(FIN, HIGH);
-  digitalWrite(SIN, LOW);
+void loop()
+{
+  motorA.Spin("forward");
+  motorB.Spin("forward");
 }
