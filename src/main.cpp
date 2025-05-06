@@ -13,8 +13,8 @@
 
 // #define IN3 5
 // #define IN4 4
-Motor motorA = Motor(13, 19, 18);
-Motor motorB = Motor(12, 5, 4);
+Motor motorA = Motor(5, 10, 9);
+Motor motorB = Motor(3, 8, 7);
 
 
 void setup()
