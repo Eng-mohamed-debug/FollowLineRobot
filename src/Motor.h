@@ -40,7 +40,7 @@ public:
 
     void Spin(const char *direction = "forward", int speed = 1023)
     {
-        if (!enabled || speed != 1023)
+        if (!enabled)
             setSpeed(speed);
 
         if (strcmp(direction, "forward") == 0)
