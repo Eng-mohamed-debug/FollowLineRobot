@@ -1,4 +1,5 @@
 #include <Arduino.h>
+#include <string.h>
 class Motor
 {
     const int EN;

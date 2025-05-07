@@ -19,8 +19,8 @@ Motor motorB = Motor(3, 8, 7);
 
 void setup()
 {
-  motorA.setSpeed();
-  motorB.setSpeed();
+  motorA.setSpeed(1023);
+  motorB.setSpeed(1023);
 }
 
 void loop()
