@@ -25,6 +25,6 @@ void setup()
 
 void loop()
 {
-  motorA.Spin("forward");
-  motorB.Spin("forward");
+  motorA.Spin("forward", 1023);
+  motorB.Spin("forward", 1023);
 }

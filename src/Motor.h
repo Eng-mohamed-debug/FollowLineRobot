@@ -38,10 +38,10 @@ public:
         digitalWrite(IN2, HIGH);
     }
 
-    void Spin(const char *direction = "forward")
+    void Spin(const char *direction = "forward", int speed = 1023)
     {
-        if (!enabled)
-            return;
+        if (!enabled || speed != 1023)
+            setSpeed(speed);
 
         if (strcmp(direction, "forward") == 0)
         {
