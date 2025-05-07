@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include <Motor.h>
+#include <Motion.h>
 
 // #define ENA 13
 // #define ENB 12
@@ -16,15 +17,13 @@
 Motor motorA = Motor(5, 10, 9);
 Motor motorB = Motor(3, 8, 7);
 
-
 void setup()
 {
   motorA.setSpeed(1023);
   motorB.setSpeed(1023);
-}
+};
 
 void loop()
 {
-  motorA.Spin("forward", 1023);
-  motorB.Spin("forward", 1023);
-}
+  Motion::Move(motorA, motorB, "forward", 800);
+};

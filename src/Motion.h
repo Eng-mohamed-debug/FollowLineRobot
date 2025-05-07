@@ -3,6 +3,7 @@
 
 class Motion
 {
+public:
     static void Move(Motor motorA, Motor motorB, char *direction, int speed)
     {
         if (strcmp(direction, "forward") == 0)
