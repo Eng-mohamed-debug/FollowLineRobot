@@ -42,16 +42,18 @@ public:
     {
         if (!enabled)
             setSpeed(speed);
-
-        if (strcmp(direction, "forward") == 0)
+        else
         {
-            digitalWrite(IN1, HIGH);
-            digitalWrite(IN2, LOW);
-        }
-        else if (strcmp(direction, "backward") == 0)
-        {
-            digitalWrite(IN2, HIGH);
-            digitalWrite(IN1, LOW);
+            if (strcmp(direction, "forward") == 0)
+            {
+                digitalWrite(IN1, HIGH);
+                digitalWrite(IN2, LOW);
+            }
+            else if (strcmp(direction, "backward") == 0)
+            {
+                digitalWrite(IN2, HIGH);
+                digitalWrite(IN1, LOW);
+            }
         }
     }
 };
